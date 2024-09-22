@@ -13,6 +13,7 @@ setup(
   download_url = 'https://github.com/psorus/ninept/archive/v_01.tar.gz',    
   keywords = ['llm'],   
   install_requires=[            
+      "requests",
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      

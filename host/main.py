@@ -13,10 +13,10 @@ request_queue = queue.Queue()
 cache = {}
 
 # Sample function that simulates a time-consuming task
-def time_consuming_function(str1, str2):
+def time_consuming_function(content, role):
     # Simulate processing time
     time.sleep(5)
-    return str1 + " " + str2
+    return content + " " + role
 
 # Worker function to process requests from the queue
 def worker():
@@ -48,8 +48,8 @@ threading.Thread(target=worker, daemon=True).start()
 def combine():
     # Get JSON data from the request
     data = request.get_json()
-    str1 = data.get('str1', '')
-    str2 = data.get('str2', '')
+    str1 = data.get('content', '')
+    str2 = data.get('role', '')
 
     # Create an event to wait for the result and a dict to store the result
     result_event = threading.Event()
