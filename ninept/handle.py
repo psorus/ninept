@@ -1,8 +1,8 @@
 import requests
 
-def qwen(content: str, role: str) -> str:
+def qwen(content: str, role:str ="You are a helpful assistant") -> str:
     # The URL of your Flask server endpoint
-    url = "http://127.0.0.1:5000/combine"
+    url = "http://129.217.54.77:5000/combine"
 
     # The data to send in the POST request
     data = {
